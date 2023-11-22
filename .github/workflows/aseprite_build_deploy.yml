@@ -6,6 +6,12 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      should_run:
+        description: "Whether the job should run"
+        type: boolean
+        default: true
 
 env:
   BUILD_TYPE: Release
