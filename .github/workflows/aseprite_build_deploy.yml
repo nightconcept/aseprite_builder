@@ -144,3 +144,6 @@ jobs:
         with:
           tag_name: ${{ needs.check-version.outputs.latest_tag }}
           files: aseprite/build/bin/Aseprite-${{ needs.check-version.outputs.latest_tag }}-${{ runner.os }}.zip
+          body: |
+            ${{ steps.version_info.outputs.version_info }}
+          draft: true
