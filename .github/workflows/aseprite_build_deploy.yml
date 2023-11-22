@@ -142,5 +142,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag: ${{ needs.check-version.outputs.latest_tag }}
-          files: Aseprite-${{ needs.check-version.outputs.latest_tag }}-${{ runner.os }}.zip
+          tag_name: ${{ needs.check-version.outputs.latest_tag }}
+          files: aseprite/build/bin/Aseprite-${{ needs.check-version.outputs.latest_tag }}-${{ runner.os }}.zip
